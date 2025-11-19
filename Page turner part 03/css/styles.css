@@ -1,0 +1,304 @@
+/* =======================================
+   1. CSS RESET & BASE STYLES
+   ======================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: #0d0d0d; /* dark background */
+  color: #ffffff;
+}
+
+/* =======================================
+   2. TYPOGRAPHY
+   ======================================= */
+h1, h2, h3 {
+  color: #00f0ff; /* Neon Blue */
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 0 8px #00f0ff, 0 0 15px #00f0ff;
+  margin-bottom: 1rem;
+}
+
+p, li {
+  color: #ff4de0; /* Neon Pink */
+  text-shadow: 0 0 4px #ff4de0;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: #00f0ff;
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #4de0ff;
+  text-shadow: 0 0 5px #4de0ff;
+}
+
+/* =======================================
+   3. HEADER & NAVIGATION
+   ======================================= */
+header {
+  background-color: #111;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+header img {
+  max-width: 220px;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00f0ff, 0 0 10px #ff4de0;
+}
+
+/* NAVIGATION MENU */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  transition: 0.3s ease-in-out;
+}
+
+.site-nav a {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none; /* hide on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .site-nav {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 15px;
+    background: #f8f8f8;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .site-nav.open {
+    display: flex; /* show menu when open */
+  }
+}
+
+
+/* =======================================
+   4. MAIN CONTENT
+   ======================================= */
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+/* ARTICLE CARD (Featured Book) */
+article {
+  background-color: #1a1a1a;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ff4de0;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  max-width: 300px;
+  margin: 2rem auto;
+}
+
+article:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff4de0, 0 0 20px #00f0ff;
+}
+
+article img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+article a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  background-color: #00f0ff;
+  color: #111;
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+article a:hover {
+  background-color: #4de0ff;
+  box-shadow: 0 0 10px #00f0ff, 0 0 15px #ff4de0;
+}
+
+/* =======================================
+   5. VIDEO SECTION
+   ======================================= */
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 900px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #00f0ff, 0 0 15px #ff4de0;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =======================================
+   6. FOOTER
+   ======================================= */
+footer {
+  background-color: #111;
+  color: #00f0ff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  text-shadow: 0 0 5px #00f0ff;
+  font-weight: 600;
+}
+
+/* =======================================
+   7. RESPONSIVE DESIGN
+   ======================================= */
+
+/* TABLET VIEW */
+@media (max-width: 1024px) {
+  main {
+    padding: 1.5rem;
+  }
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .site-nav {
+    display: none;
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 220px;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+  }
+
+  .site-nav.show {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 0.5rem 0;
+  }
+
+  article {
+    margin: 1.5rem auto;
+  }
+
+  .video-container {
+    max-width: 100%;
+    width: 90%;
+  }
+}
+/* Hamburger button */
+.hamburger {
+  display: none; /* hide on desktop */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  background: #333;
+  border-radius: 2px;
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  gap: 20px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+
+  .site-nav {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 15px;
+    background: #f8f8f8;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  .site-nav.open {
+    display: flex; /* show menu when open */
+  }
+}

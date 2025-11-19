@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - PageTurner Bookstore</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    main { max-width: 900px; margin: auto; padding: 20px; }
+    article { border-bottom: 1px solid #ccc; padding: 20px 0; }
+    article h2 { margin-bottom: 10px; }
+    article a { color: #4CAF50; text-decoration: none; }
+    article a:hover { text-decoration: underline; }
+    .categories a { margin-right: 10px; background: #f0f0f0; padding: 5px 10px; border-radius: 5px; text-decoration: none; color: #333; }
+    .categories a:hover { background: #4CAF50; color: white; }
+    .social-share a { margin-right: 10px; font-size: 1.2rem; color: #333; text-decoration: none; }
+    .social-share a:hover { color: #4CAF50; }
+    section.newsletter { margin-top: 30px; }
+    section.newsletter input { padding: 8px; width: 70%; }
+    section.newsletter button { padding: 9px 15px; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../assets/book-store-neon-sign-with-brick-wall-background-free-vector.jpg" alt="PageTurner Logo" width="200">
+    
+    <!-- Mobile menu button -->
+      <button class="hamburger" aria-label="open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    <nav>
+      <a href="../index.html">Home</a> 
+      <a href="about_us.html">About Us</a> 
+      <a href="contact_us.html">Contact Us</a>
+      <a href="Blog.html">Blog</a> 
+      <a href="event.html">Events</a> 
+      <a href="store.html">Store</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <h1>Book Reviews & News</h1>
+
+    <!-- Categories -->
+    <section class="categories">
+      <h3>Categories:</h3>
+      <a href="#">Reviews</a>
+      <a href="#">Interviews</a>
+      <a href="#">News</a>
+      <a href="#">Events</a>
+    </section>
+
+    <!-- Blog Articles -->
+    <article>
+      <h2>Review: The Midnight Library</h2>
+      <p>A heartwarming story about life’s choices by Matt Haig.</p>
+      <a href="https://www.matthaig.com/books/midnight-library/">Read More</a>
+
+      <!-- Social Sharing -->
+      <div class="social-share">
+        <span>Share: </span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </article>
+
+    <article>
+      <h2>Interview with Hlonolofatso Sesene</h2>
+      <p>Insights into her latest novel and writing journey.</p>
+      <a href="#">Read More</a>
+
+      <!-- Social Sharing -->
+      <div class="social-share">
+        <span>Share: </span>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </article>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PageTurner Bookstore | Built for our community of readers</p>
+  </footer>
+<!-- JavaScript for hamburger toggle -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.site-nav');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

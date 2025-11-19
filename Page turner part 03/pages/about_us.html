@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - PageTurner Bookstore</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Team section styling (keeps your page style intact) */
+    .team-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-top: 20px; }
+    .team-member { text-align: center; width: 180px; }
+    .team-member img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+    .team-member p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../assets/book-store-neon-sign-with-brick-wall-background-free-vector.jpg" 
+         alt="PageTurner Logo" width="200">
+    
+    <!-- Hamburger for mobile -->
+    <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" role="navigation" aria-label="Main navigation">
+      <a href="../index.html">Home</a> 
+      <a href="about_us.html" class="active">About Us</a> 
+      <a href="blog.html">Blog</a> 
+      <a href="event.html">Events</a> 
+      <a href="store.html">Store</a> 
+      <a href="contact_us.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>About PageTurner Bookstore</h1>
+
+    <img src="../assets/teams.jpg" alt="Our Team" width="500">
+
+    <p>
+      Founded 15 years ago, <strong>PageTurner Bookstore</strong> has been at the heart of 
+      Pretoria’s reading community.
+    </p>
+
+    <p>
+      We host book clubs, community events, and author signings to bring readers and writers together.
+      Our goal is to make reading a shared adventure — whether you’re discovering a new genre or meeting
+      your favorite author in person.
+    </p>
+
+    <!-- Team Members -->
+    <section>
+      <h2>Meet Our Team</h2>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="../assets/ceo - Copy.jpg" alt="Phodzo">
+          <p><strong>Phodzo</strong></p>
+          <p>Founder & CEO</p>
+        </div>
+
+        <div class="team-member">
+          <img src="../assets/author talk  - Copy.jpg" alt="Hlonolofatso">
+          <p><strong>Hlonolofatso</strong></p>
+          <p>Head of Events</p>
+        </div>
+
+        <div class="team-member">
+          <img src="../assets/community manager - Copy.jpg" alt="Lerato">
+          <p><strong>Lerato</strong></p>
+          <p>Community Manager</p>
+        </div>
+
+        <div class="team-member">
+          <img src="../assets/store manager - Copy.jpg" alt="Paul Adams">
+          <p><strong>Paul Adams</strong></p>
+          <p>Store Manager</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PageTurner Bookstore. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for hamburger toggle -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.site-nav');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+

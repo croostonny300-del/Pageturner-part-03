@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | PageTurner Bookstore</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <!-- Optional: Font Awesome for social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Quick inline CSS for layout */
+    main { max-width: 900px; margin: auto; padding: 20px; }
+    form input, form textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+    button { padding: 10px 20px; cursor: pointer; background-color: #4CAF50; color: white; border: none; border-radius: 5px; }
+    section { margin-top: 30px; }
+    iframe { width: 100%; height: 400px; border: 0; }
+    .social-icons a { margin-right: 10px; font-size: 1.5rem; color: #333; text-decoration: none; }
+    .social-icons a:hover { color: #4CAF50; }
+    #backToTop { position: fixed; bottom: 20px; right: 20px; display: none; padding: 10px; background: #4CAF50; color: white; border: none; border-radius: 50%; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>PageTurner Bookstore</h1>
+    <!-- Mobile menu button -->
+      <button class="hamburger" aria-label="open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    <nav>
+      <a href="../index.html">Home</a> 
+      <a href="about_us.html">About Us</a> 
+      <a href="contact_us.html">Contact Us</a>
+      <a href="Blog.html">Blog</a> 
+      <a href="event.html">Events</a> 
+      <a href="store.html">Store</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Reach out via the form below or using our store details.</p>
+
+    <!-- Contact Form -->
+    <section>
+      <h3>Send Us a Message</h3>
+      <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="e.g. 0821234567">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+
+        <label>Preferred Contact Method:</label><br>
+        <input type="radio" id="emailMethod" name="contactMethod" value="Email" checked>
+        <label for="emailMethod">Email</label>
+        <input type="radio" id="phoneMethod" name="contactMethod" value="Phone">
+        <label for="phoneMethod">Phone</label><br><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Contact Information -->
+    <section>
+      <h3>Our Store</h3>
+      <p>Devenish Street, Polokwane, South Africa</p>
+      <p>Email: <a href="mailto:info@pageturnerbookstore.com">info@pageturnerbookstore.com</a></p>
+      <p>Phone: +27 82 123 4567</p>
+
+      <h3>Opening Hours</h3>
+      <p>Mon–Fri: 9:00 – 18:00</p>
+      <p>Sat: 10:00 – 16:00</p>
+      <p>Sun: Closed</p>
+    </section>
+
+    <!-- Google Maps -->
+    <section>
+      <h3>Find Us</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3647.6023667843815!2d29.456841999999998!3d-23.9037149!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d82ef3f0eb31%3A0x9b7b9dbf28644d45!2sDevenish%20St%2C%20Polokwane%2C%200700!5e0!3m2!1sen!2sza!4v1756209978813!5m2!1sen!2sza"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Book store location map">
+      </iframe>
+    </section>
+
+    <!-- Social Media Links -->
+    <section>
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://facebook.com/pageturner" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com/pageturner" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/pageturner" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/company/pageturner" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section>
+      <h3>Subscribe to Our Newsletter</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+      <h3>FAQs</h3>
+      <p><strong>Q:</strong> Do you offer home delivery?<br>
+         <strong>A:</strong> Yes, we deliver within Polokwane and surrounding areas.</p>
+      <p><strong>Q:</strong> Can I reserve books online?<br>
+         <strong>A:</strong> Yes, you can use our store page to reserve books.</p>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'});">↑</button>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PageTurner Bookstore | Built for our community of readers</p>
+  </footer>
+
+  <!-- JavaScript for hamburger toggle -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.site-nav');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events - PageTurner Bookstore</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    main { max-width: 900px; margin: auto; padding: 20px; }
+    ul { list-style-type: none; padding: 0; }
+    ul li { background: #f9f9f9; margin: 10px 0; padding: 10px; border-radius: 5px; }
+    form input, form button { width: 100%; padding: 8px; margin-bottom: 10px; }
+    button { background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #45a049; }
+    section.social-share a { margin-right: 10px; font-size: 1.2rem; color: #333; text-decoration: none; }
+    section.social-share a:hover { color: #4CAF50; }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <img src="../assets/book-store-neon-sign-with-brick-wall-background-free-vector.jpg" alt="PageTurner Logo" width="200">
+    <!-- Mobile menu button -->
+      <button class="hamburger" aria-label="open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    <nav>
+      <a href="../index.html">Home</a> 
+      <a href="about_us.html">About Us</a> 
+      <a href="contact_us.html">Contact Us</a>
+      <a href="Blog.html">Blog</a> 
+      <a href="event.html">Events</a> 
+      <a href="store.html">Store</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <main>
+    <h1>Upcoming Events</h1>
+
+    <!-- Event List -->
+    <section class="events-list">
+      <ul>
+        <li>
+          <strong>Author Talk:</strong> Hlonolofatso Sesene <br>
+          <span>Date:</span> 12 December 2025 <span> | Time:</span> 6PM
+        </li>
+        <li>
+          <strong>Book Club:</strong> Discussing "MY LIFE" <br>
+          <span>Date:</span> 13 December 2025 <span> | Time:</span> 5PM
+        </li>
+        <li>
+          <strong>Children’s Story Time:</strong> Saturdays @ 10AM
+        </li>
+      </ul>
+    </section>
+
+    <!-- Event Registration Form -->
+    <section>
+      <h2>Register for an Event</h2>
+      <form>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="eventSelect">Select Event:</label>
+        <select id="eventSelect" name="eventSelect" required>
+          <option value="">--Choose an Event--</option>
+          <option value="authorTalk">Author Talk: Hlonolofatso Sesene</option>
+          <option value="bookClub">Book Club: Discussing "MY LIFE"</option>
+          <option value="storyTime">Children’s Story Time</option>
+        </select>
+
+        <button type="submit">Register</button>
+      </form>
+    </section>
+
+    <!-- Social Share for Events -->
+    <section class="social-share">
+      <h3>Share Our Events</h3>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h3>Subscribe to Event Updates</h3>
+      <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 PageTurner Bookstore | Stay updated with our latest events</p>
+  </footer>
+  <!-- JavaScript for hamburger toggle -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.site-nav');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

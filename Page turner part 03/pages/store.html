@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bookstore - PageTurner Bookstore</title>
+<link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  main { max-width: 1200px; margin: auto; padding: 20px; }
+  h1, h2 { text-align: center; }
+  .search-bar { text-align: center; margin-bottom: 20px; }
+  .search-bar input { width: 50%; padding: 8px; }
+  .books-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(180px,1fr)); gap: 20px; }
+  article { border: 1px solid #ccc; border-radius: 5px; padding: 10px; text-align: center; transition: transform 0.2s; }
+  article:hover { transform: scale(1.05); box-shadow: 0 0 10px rgba(0,0,0,0.2); }
+  article img { width: 150px; height: 200px; object-fit: cover; }
+  button { padding: 8px 12px; margin-top: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; }
+  button:hover { background-color: #45a049; }
+  section.newsletter { text-align: center; margin-top: 40px; }
+  section.newsletter input { padding: 8px; width: 40%; }
+  section.newsletter button { padding: 9px 15px; }
+</style>
+</head>
+<body>
+
+<header>
+  <img src="../assets/book-store-neon-sign-with-brick-wall-background-free-vector.jpg" alt="PageTurner Logo" width="200">
+  <!-- Mobile menu button -->
+      <button class="hamburger" aria-label="open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="about_us.html">About Us</a>
+    <a href="contact_us.html">Contact Us</a>
+    <a href="Blog.html">Blog</a>
+    <a href="event.html">Events</a>
+    <a href="store.html">Store</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Our Bookstore</h1>
+  <p style="text-align:center;">Browse our collection of fiction, non-fiction, and more.</p>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search books by title or author...">
+    <button>Search</button>
+  </div>
+
+  <!-- Books Grid -->
+  <section class="books-grid">
+    <article>
+      <img src="../assets/love.png" alt="Book Love">
+      <p><strong>Book Love</strong><br>by Cameron Wynter</p>
+      <p><strong>R200</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/novel.jpeg" alt="Book Novel">
+      <p><strong>Book Novel</strong><br>by L.D Goffigan</p>
+      <p><strong>R150</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/horror.webp" alt="Book Horror">
+      <p><strong>Book Horror</strong><br>by William W. Johnstone</p>
+      <p><strong>R250</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/philosophy.jpg" alt="Book Philosophy">
+      <p><strong>Book Philosophy</strong><br>by James Dakota</p>
+      <p><strong>R180</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/advanture.jpg" alt="Book Adventure">
+      <p><strong>Book Adventure</strong><br>by J.M. Morgan</p>
+      <p><strong>R110</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/biography.jpg" alt="Book Biography">
+      <p><strong>Book Biography</strong><br>by Emma Rate</p>
+      <p><strong>R130</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/plays.jpg" alt="Book Plays">
+      <p><strong>Book Plays</strong><br>by Arthur Miller</p>
+      <p><strong>R180</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/short story.webp" alt="Book Short Story">
+      <p><strong>Book Short Story</strong><br>by Marilyn Horn</p>
+      <p><strong>R200</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/poetry.jpg" alt="Book Poetry">
+      <p><strong>Book Poetry</strong><br>by Joshua Thaddeus Hill</p>
+      <p><strong>R210</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/science.webp" alt="Book Science">
+      <p><strong>Book Science</strong><br>by Stephen B. Haunts</p>
+      <p><strong>R220</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/autobiography.webp" alt="Book Autobiography">
+      <p><strong>Book Autobiography</strong><br>by Dorothy Mitchell</p>
+      <p><strong>R200</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/tale.jpg" alt="Book Tale">
+      <p><strong>Book Tale</strong><br>by Amanda Lovelace</p>
+      <p><strong>R150</strong></p>
+      <button>More Info</button>
+    </article>
+
+    <article>
+      <img src="../assets/thriller.jpg" alt="Book Thriller">
+      <p><strong>Book Thriller</strong><br>by Dean Rasmussen</p>
+      <p><strong>R190</strong></p>
+      <button>More Info</button>
+    </article>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <section class="newsletter">
+    <h2>Subscribe to Our Newsletter</h2>
+    <form>
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 PageTurner Bookstore | Your hub for all books</p>
+</footer>
+<!-- JavaScript for hamburger toggle -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.site-nav');
+
+    hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', !expanded);
+      nav.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
